@@ -1,0 +1,8 @@
+Flask
+openai
+google-api-python-client
+matplotlib
+seaborn
+pandas
+stripe
+python-dotenv

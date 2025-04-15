@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유튜브 해시태그 트렌드 분석</title>
+</head>
+<body>
+    <h1>유튜브 해시태그 트렌드 분석</h1>
+    <form method="POST">
+        <label for="question">카테고리나 키워드를 입력하세요:</label><br>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">분석하기</button>
+    </form>
+
+    {% if hashtags %}
+        <h2>GPT 응답:</h2>
+        <p>{{ answer }}</p>
+        <h2>관련 해시태그 그래프:</h2>
+        <img src="{{ url_for('static', filename='plot.png') }}" alt="해시태그 그래프">
+    {% endif %}
+</body>
+</html>
